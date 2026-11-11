@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Deepfake Detector</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 48px;
+      color: #c9a962;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .subtitle {
+      color: #888;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #c9a962;
+      margin: 40px 0 20px 0;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #bbb;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #bbb;
+    }
+
+    .highlight {
+      background: #1a1a1a;
+      border-left: 3px solid #c9a962;
+      padding: 20px;
+      margin: 24px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight p {
+      margin: 0;
+      color: #ddd;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1a2e1a;
+      color: #4ade80;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+
+    .badge.no {
+      background: #2e1a1a;
+      color: #f87171;
+    }
+
+    .badge.warn {
+      background: #2e2a1a;
+      color: #fbbf24;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #222;
+    }
+
+    th {
+      color: #888;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    td {
+      color: #bbb;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid #222;
+      text-align: center;
+      color: #555;
+      font-size: 13px;
+    }
+
+    a {
+      color: #c9a962;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">&#9672;</div>
+      <h1>Deepfake Detector Privacy Policy</h1>
+      <p class="subtitle">On-device checks for signs of AI-generated or edited images</p>
+    </header>
+
+    <div class="highlight">
+      <p><strong>Summary:</strong> Deepfake Detector analyzes images and videos in your browser. The developer does not collect your images, your browsing history, or an account. Limited network use is described below: downloading model weight files, optional user-initiated reverse image search, and an optional second-opinion feature that you must turn on.</p>
+    </div>
+
+    <h2>What Data We Collect</h2>
+    <p><span class="badge">None by the developer</span> We do not operate a server that receives your pictures, name, or email. We do not have an account system, and we do not use analytics or advertising trackers in the extension.</p>
+    <p>The extension does store some information <strong>on your device</strong> using Chrome’s storage APIs and the browser cache:</p>
+    <ul>
+      <li>Your settings (for example, whether hover buttons and upload watermarking are on, and any second-opinion endpoint or API key you entered)</li>
+      <li>Records of photos you chose to watermark (hashes, a small thumbnail, and a local signature), so you can later show that a copy was protected</li>
+      <li>A short-lived job when you ask to analyze or report something (the media address, page title and URL, and, if you chose “I’ve been deepfaked,” a screenshot of the current tab)</li>
+      <li>Cached model weight files after they have been downloaded and integrity-checked</li>
+    </ul>
+    <p>This on-device data is deleted when you clear the extension’s data or uninstall it, except for files you explicitly saved (for example, a report you downloaded or a watermarked photo).</p>
+
+    <h2>What the Extension Does</h2>
+    <p>Deepfake Detector is a Chrome extension that:</p>
+    <ul>
+      <li>Checks a photo or illustration you choose for signs of AI generation or editing, on your device, and explains the evidence</li>
+      <li>Lets you watermark your own JPEG or PNG photos, including an option to watermark a photo in a website’s file picker before it is uploaded</li>
+      <li>Helps you start a reverse image search or build a local report pack if a deepfake of you appears online</li>
+    </ul>
+    <p>Results are probabilistic signals, not proof that an image is real or fake.</p>
+
+    <h2>What Leaves Your Device</h2>
+    <table>
+      <tr>
+        <th>Activity</th>
+        <th>What is sent</th>
+      </tr>
+      <tr>
+        <td>Analyzing an image or video (default)</td>
+        <td>Nothing. Checks run locally. Your media is not uploaded to us or to the model hosts.</td>
+      </tr>
+      <tr>
+        <td>First use of the photograph or illustration detectors</td>
+        <td>The extension downloads ONNX model <em>weight files</em> from huggingface.co (about 84 MB for photographs, and a further 190 MB the first time an illustration is analyzed). Downloads use no cookies or credentials. Each file is size-capped and checked against a SHA-256 hash built into the extension. If the hash does not match, the file is discarded. Your images are not included in these requests.</td>
+      </tr>
+      <tr>
+        <td>Reverse image search (you click a search button or menu item)</td>
+        <td>If the picture has a public web address, a new tab opens on Google Lens, TinEye, Bing, or Yandex with that address in the search URL, so the search engine can fetch the picture. If the picture has no public address, the extension does not send it; you may save the file and upload it on the search site yourself.</td>
+      </tr>
+      <tr>
+        <td>Optional “second opinion” (off by default)</td>
+        <td>If you turn this on and enter an endpoint, a copy of the picture (at most 1,024 pixels on a side) is sent to that endpoint, along with any API key you stored. A warning is shown in Settings while this is on. We do not operate that endpoint.</td>
+      </tr>
+      <tr>
+        <td>Ko-fi tip link</td>
+        <td>If you click “Support this project on Ko-fi,” ko-fi.com/niurruan opens in a new tab. No payment is required to use the extension, and no feature is paywalled.</td>
+      </tr>
+    </table>
+
+    <h2>What We Do NOT Do</h2>
+    <table>
+      <tr>
+        <th>Activity</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Collect personal information for an account or mailing list</td>
+        <td><span class="badge no">No</span></td>
+      </tr>
+      <tr>
+        <td>Upload your images to the developer</td>
+        <td><span class="badge no">No</span></td>
+      </tr>
+      <tr>
+        <td>Record your browsing history</td>
+        <td><span class="badge no">No</span></td>
+      </tr>
+      <tr>
+        <td>Sell or share your data with advertisers</td>
+        <td><span class="badge no">No</span></td>
+      </tr>
+      <tr>
+        <td>Require payment or a sign-in to use features</td>
+        <td><span class="badge no">No</span></td>
+      </tr>
+      <tr>
+        <td>Execute remotely hosted JavaScript</td>
+        <td><span class="badge no">No</span></td>
+      </tr>
+    </table>
+
+    <h2>Permissions Explained</h2>
+    <p><strong>contextMenus:</strong> Adds right-click actions to analyze media, start a report, or open a reverse image search.</p>
+    <p><strong>sidePanel:</strong> Shows the extension’s interface next to the page you are viewing.</p>
+    <p><strong>storage</strong> and <strong>unlimitedStorage:</strong> Save settings, protected-image records, and cached model files on your device. The model cache can be larger than Chrome’s default 5 MB quota.</p>
+    <p><strong>host access to all sites (&lt;all_urls&gt;):</strong> Needed so you can analyze media on any website, so optional hover buttons and upload watermarking can work on the page you are using, and so the extension can read a picture or video you selected (including addresses that only the page can access). When you choose “I’ve been deepfaked,” the extension may capture a screenshot of the current tab for a report pack that stays on your device. The extension does not use this permission to collect your browsing history.</p>
+
+    <h2>Data Storage</h2>
+    <p>Settings, protected-image records, and pending report details are stored locally in your browser. Cached model weights are stored in the browser cache. These stay on your device and are not accessible to us. Uninstalling the extension removes its local data.</p>
+
+    <h2>Third Parties</h2>
+    <p>We do not sell your information. The following third parties may receive data only in the cases already described:</p>
+    <ul>
+      <li><strong>Hugging Face (huggingface.co):</strong> hosts the model weight files the extension may download. Those requests do not include your images.</li>
+      <li><strong>Reverse image search providers</strong> (Google Lens, TinEye, Bing, Yandex): receive the public image URL only if you start a search, or receive a file only if you upload it on their site yourself.</li>
+      <li><strong>A vision-model provider you choose:</strong> only if you enable “second opinion” and enter their address.</li>
+      <li><strong>Ko-fi:</strong> only if you open the tip link.</li>
+    </ul>
+    <p>The extension packages open-source libraries, including ONNX Runtime, Tesseract, and MediaPipe Vision. The MediaPipe and Tesseract code and models used for analysis are loaded from files included with the extension, not from a content delivery network.</p>
+
+    <h2>Children’s Privacy</h2>
+    <p>This extension is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we make any changes to this privacy policy, we will update this page with the new information and change the “Last Updated” date below.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions about this privacy policy or the extension, please contact us at:</p>
+    <p><a href="mailto:xiaoyiruan.ca@gmail.com">xiaoyiruan.ca@gmail.com</a></p>
+
+    <footer>
+      <p>Last Updated: November 11, 2026</p>
+      <p style="margin-top: 10px;">&#9672; Deepfake Detector — probabilistic signals, not proof</p>
+    </footer>
+  </div>
+</body>
+</html>
